@@ -1,0 +1,8 @@
+Binding.xs
+Changes
+Makefile.PL
+MANIFEST
+ppport.h
+README
+t/LibGit2-Binding.t
+lib/LibGit2/Binding.pm

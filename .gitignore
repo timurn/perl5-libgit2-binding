@@ -1,0 +1,9 @@
+blib
+LibGit2-Binding*
+*.bs
+*.o
+*.c
+Makefile*
+!Makefile.PL
+ppport.h
+pm_to_blib
