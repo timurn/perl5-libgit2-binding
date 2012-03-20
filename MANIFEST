@@ -4,5 +4,5 @@ Makefile.PL
 MANIFEST
 ppport.h
 README
-t/LibGit2-Binding.t
+t/repository.t
 lib/LibGit2/Binding.pm

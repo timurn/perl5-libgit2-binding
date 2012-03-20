@@ -3,6 +3,7 @@ LibGit2-Binding*
 *.bs
 *.o
 *.c
+*.xsc
 Makefile*
 !Makefile.PL
 ppport.h

@@ -15,15 +15,23 @@ our @ISA = qw(Exporter);
 # This allows declaration	use LibGit2::Binding ':all';
 # If you do not need this, moving things directly into @EXPORT or @EXPORT_OK
 # will save memory.
-our %EXPORT_TAGS = ( 'all' => [ qw(
-	
-) ] );
+our @api_repository_functions = qw/
+    git_repository_config git_repository_discover git_repository_free
+    git_repository_head git_repository_head_detached git_repository_head_orphan
+    git_repository_index git_repository_init git_repository_is_bare git_repository_is_empty
+    git_repository_odb git_repository_open git_repository_path
+    git_repository_set_config git_repository_set_index git_repository_set_odb
+    git_repository_set_workdir git_repository_workdir
+/;
+our @api_functions = ( @api_repository_functions );
+our @constructor_functions = qw/ new_repository /;
+
+our %EXPORT_TAGS = (
+    'all' => [ @api_functions, @constructor_functions ],
+    'api' => [ @api_functions ]
+);
 
 our @EXPORT_OK = ( @{ $EXPORT_TAGS{'all'} } );
-
-our @EXPORT = qw(
-	
-);
 
 our $VERSION = '0.01';
 
