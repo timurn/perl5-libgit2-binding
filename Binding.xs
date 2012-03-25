@@ -7,7 +7,7 @@
 MODULE = LibGit2::Binding PACKAGE = LibGit2::Binding
 PROTOTYPES: DISABLE
 
-# repository functions
+# constructors
 
 git_repository *
 new_repository()
@@ -16,6 +16,19 @@ new_repository()
         RETVAL = repo;
     OUTPUT:
         RETVAL
+
+# git errors functions
+
+const char *
+git_lasterror()
+
+void
+git_clearerror()
+
+const char *
+git_strerror(int num)
+
+# git repository functions
 
 #int
 #git_repository_config(git_config * out, git_repository * repo)
